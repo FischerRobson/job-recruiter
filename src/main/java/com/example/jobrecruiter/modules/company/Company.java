@@ -1,4 +1,4 @@
-package com.example.jobrecruiter.modules.candidate;
+package com.example.jobrecruiter.modules.company;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,15 +14,13 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-@Entity(name = "candidates")
-public class Candidate {
-
+@Entity(name = "companies")
+public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Pattern(regexp = "\\S+", message = "Username cant have empty spaces")
-    private String name;
     private String username;
 
     @Email(message = "Email invalid")
@@ -31,10 +29,11 @@ public class Candidate {
     @Length(min = 10, max = 14, message = "Length must be between 10 and 14 characters")
     private String password;
 
+    private String website;
+    private String document;
+    private String name;
     private String description;
-    private String curriculum;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
-
 }
