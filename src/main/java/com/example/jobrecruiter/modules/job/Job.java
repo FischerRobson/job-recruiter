@@ -1,5 +1,6 @@
-package com.example.jobrecruiter.modules.company;
+package com.example.jobrecruiter.modules.job;
 
+import com.example.jobrecruiter.modules.company.Company;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -16,7 +17,7 @@ public class Job {
     private UUID id;
 
     private String description;
-    private String level;
+    private JobLevels level;
     private String benefits;
 
     @JoinColumn(name = "company_id")

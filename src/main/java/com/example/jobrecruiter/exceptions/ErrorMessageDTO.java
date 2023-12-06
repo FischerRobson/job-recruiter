@@ -1,4 +1,4 @@
-package com.example.jobrecruiter.modules.exceptions;
+package com.example.jobrecruiter.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
